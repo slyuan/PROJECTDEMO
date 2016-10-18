@@ -14,4 +14,6 @@
 	<bean id="win" class="javax.swing.JFrame"/>
 	<!-- 配置名为date的Bean，其实现类是java.util.Date类 -->
 	<bean id="date" class="java.util.Date"/>
+	<!-- 配置监听器 -->
+	<bean class="com.amarsoft.slyuan.spring.listerner.EmailNofier"/>
 </beans>
