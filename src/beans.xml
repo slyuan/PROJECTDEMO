@@ -25,4 +25,11 @@
 	<constructor-arg value="cat"/>
 	<property name="msg" value="我是猫"/>
 	</bean>
+	<!-- 实例工厂配置 -->
+	<bean id="personFactory" class="com.amarsoft.slyuan.spring.beanproduct.PersonFactory"/>
+	<bean id="chin" factory-bean="personFactory" factory-method="getPerson">
+	<constructor-arg value="chin"/>
+	</bean>
+<!-- 	<bean id="ame" class="personFactory" factory-method="getPerson">
+	</bean> -->
 </beans>
