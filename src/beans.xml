@@ -16,4 +16,13 @@
 	<bean id="date" class="java.util.Date"/>
 	<!-- ÅäÖÃ¼àÌýÆ÷ -->
 	<bean class="com.amarsoft.slyuan.spring.listerner.EmailNofier"/>
+	<!-- ¾²Ì¬¹¤³§ÅäÖÃ -->
+	<bean id="dog" class="com.amarsoft.slyuan.spring.beanproduct.BeingFactory" factory-method="getBeing">
+	<constructor-arg value="dog"/>
+	<property name="msg" value="ÎÒÊÇ¹·"/>
+	</bean>
+	<bean id="cat" class="com.amarsoft.slyuan.spring.beanproduct.BeingFactory" factory-method="getBeing">
+	<constructor-arg value="cat"/>
+	<property name="msg" value="ÎÒÊÇÃ¨"/>
+	</bean>
 </beans>
