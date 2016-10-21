@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="GBK"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 	<!-- 配置名为person的Bean，其实现类是com.amarsoft.slyuan.spring.Chinese类 -->
@@ -32,4 +33,9 @@
 	</bean>
 <!-- 	<bean id="ame" class="personFactory" factory-method="getPerson">
 	</bean> -->
+	<bean id="chinesebean" class="com.amarsoft.slyuan.spring.afterbeanprocess.Chinese" p:axe-ref="stoneaxe" p:name="注入的指">
+	</bean>
+	<!-- bean后处理配置 -->
+	<bean class="com.amarsoft.slyuan.spring.afterbeanprocess.MyBeanPostProcessor">
+	</bean>
 </beans>
